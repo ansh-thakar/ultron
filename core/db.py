@@ -13,4 +13,9 @@ def get_engine():
         port=int(cfg["port"]),
         database=cfg["database"],
     )
-    return create_engine(url, pool_pre_ping=True, pool_recycle=3600)
+    return create_engine(
+        url,
+        pool_pre_ping=True,
+        pool_recycle=3600,
+        connect_args={"ssl_verify_cert": False, "ssl_verify_identity": False},
+    )
