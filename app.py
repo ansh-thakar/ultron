@@ -11,7 +11,7 @@ from core.queries import (
 from core.ai import ask_ultron
 
 st.set_page_config(page_title="ULTRON", layout="wide")
-st.logo("assets/logo.png")
+st.logo("logo.png")
 
 css = Path(__file__).parent / "assets" / "ultron.css"
 st.markdown(f"<style>{css.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
