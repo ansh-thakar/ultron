@@ -1,0 +1,16 @@
+/* Character palette — reference for Phase 3 CSS */
+--cap-blue:      #1E5EFF;
+--cap-red:       #C8102E;
+--iron-gold:     #FFC72C;
+--iron-red:      #B71C1C;
+--strange-orange:#FF7A00;
+--strange-teal:  #00BFA5;
+--hulk-green:    #43A047;
+--thor-blue:     #4FC3F7;
+--thor-bifrost:  #B39DDB;
+--loki-emerald:  #2E7D32;
+--loki-gold:     #C6A664;
+--doom-green:    #1B5E20;
+--doom-steel:    #607D8B;
+--thanos-purple: #7B1FA2;
+--ultron-red:    #E63946;

@@ -1,0 +1,20 @@
+[theme]
+base = "dark"
+
+# Iron Man gold as the global primary accent
+primaryColor = "#FFC72C"
+
+# Avengers Tower at night — cool blue-black, not warm black
+backgroundColor = "#0B1220"
+
+# Card / surface layer
+secondaryBackgroundColor = "#131B2E"
+
+# Cool white text
+textColor = "#E8EDF5"
+
+[server]
+runOnSave = true
+headless = true
+
+
