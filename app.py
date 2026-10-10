@@ -10,23 +10,24 @@ from core.queries import (
 )
 from core.ai import ask_ultron
 
-import base64
 from pathlib import Path
+import base64
 
-logo_b64 = base64.b64encode(Path("logo.png").read_bytes()).decode()
+logo_path = Path(__file__).parent / "logo.jpg"
+logo_b64 = base64.b64encode(logo_path.read_bytes()).decode()
 
 st.markdown(f"""
 <div style="display:flex; align-items:center; gap:18px; margin-bottom:20px;">
-    <img src="data:image/png;base64,{logo_b64}" width="72" height="72" 
+    <img src="data:image/jpeg;base64,{logo_b64}" width="72" height="72"
          style="border-radius:10px; filter: drop-shadow(0 0 12px rgba(212,162,76,0.5));" />
     <div>
-        <h1 style="margin:0; font-family:'Roboto Serif',serif; 
+        <h1 style="margin:0; font-family:'Roboto Serif',serif;
                    font-size:2.4rem; letter-spacing:6px;
                    background:linear-gradient(180deg,#F2DCB0,#D4A24C 60%,#8A6B32);
                    -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
             ULTRON
         </h1>
-        <div style="color:#7A8BA0; font-size:0.75rem; letter-spacing:4px; 
+        <div style="color:#7A8BA0; font-size:0.75rem; letter-spacing:4px;
                     text-transform:uppercase; margin-top:4px;">
             Student Academic Management & Analytics
         </div>
