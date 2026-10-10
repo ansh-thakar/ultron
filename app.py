@@ -10,8 +10,29 @@ from core.queries import (
 )
 from core.ai import ask_ultron
 
-st.set_page_config(page_title="ULTRON", layout="wide")
-st.logo("logo.jpg")
+import base64
+from pathlib import Path
+
+logo_b64 = base64.b64encode(Path("logo.png").read_bytes()).decode()
+
+st.markdown(f"""
+<div style="display:flex; align-items:center; gap:18px; margin-bottom:20px;">
+    <img src="data:image/png;base64,{logo_b64}" width="72" height="72" 
+         style="border-radius:10px; filter: drop-shadow(0 0 12px rgba(212,162,76,0.5));" />
+    <div>
+        <h1 style="margin:0; font-family:'Roboto Serif',serif; 
+                   font-size:2.4rem; letter-spacing:6px;
+                   background:linear-gradient(180deg,#F2DCB0,#D4A24C 60%,#8A6B32);
+                   -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+            ULTRON
+        </h1>
+        <div style="color:#7A8BA0; font-size:0.75rem; letter-spacing:4px; 
+                    text-transform:uppercase; margin-top:4px;">
+            Student Academic Management & Analytics
+        </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 css = Path(__file__).parent / "assets" / "ultron.css"
 st.markdown(f"<style>{css.read_text(encoding='utf-8')}</style>", unsafe_allow_html=True)
